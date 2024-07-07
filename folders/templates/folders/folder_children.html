@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ folder.name }} - Children</title>
+</head>
+<body>
+    <h1>{{ folder.name }} - Children</h1>
+    {% if children %}
+        <ul>
+        {% for child in children %}
+            <li><a href="{% url 'folder_detail' child.id %}">{{ child.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>This folder has no children.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folder List</title>
+</head>
+<body>
+    <h1>Folder List</h1>
+    <ul>
+    {% for folder in folders %}
+        <li><a href="{% url 'folder_detail' folder.id %}">{{ folder.name }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

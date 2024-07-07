@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folder Detail</title>
+</head>
+<body>
+    <h1>{{ folder.name }}</h1>
+    {% if parent %}
+        <p>Parent Folder: <a href="{% url 'folder_detail' parent.id %}">{{ parent.name }}</a></p>
+    {% else %}
+        <p>This folder has no parent.</p>
+    {% endif %}
+</body>
+</html>
